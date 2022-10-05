@@ -1,0 +1,430 @@
+body {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.hero-section {
+  color: white;
+  max-width: 540px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+.hero-section h1, .hero-section p {
+  color: inherit;
+}
+
+.flx {
+  display: flex;
+}
+
+.flx-wrap {
+  flex-wrap: wrap;
+}
+
+.flx-c {
+  justify-content: center;
+}
+
+.flx-bt {
+  justify-content: space-between;
+}
+
+.flx-ar {
+  justify-content: space-around;
+}
+
+.flx-even {
+  justify-content: space-evenly;
+}
+
+.flx-start {
+  align-items: start;
+}
+
+.flx-end {
+  align-items: end;
+}
+
+.flx-align-c {
+  align-items: center;
+}
+
+.flx-align-stretch {
+  align-items: stretch;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+section {
+  min-height: 100vh;
+  position: relative;
+}
+.not-100vh {
+  min-height: 0;
+}
+
+.bg-vh {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  position: relative;
+}
+
+.bg-1 {
+  background-image: url(/assets/img/image_hero.jpg);
+}
+
+.bg-vh::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(5deg, rgba(0, 0, 0, 0.45) 5%, transparent);
+}
+
+.nav-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.45);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 999;
+}
+.nav-header .navbar {
+  padding: 0.8rem 3rem 0;
+}
+.nav-header .navbar .menu-center, .nav-header .navbar .menu-right {
+  display: none;
+}
+.nav-header .hamburger-menu a {
+  min-width: 0;
+}
+.nav-header .hamburger-menu .dropdown-toggle::after {
+  display: none;
+}
+.nav-header .hamburger-menu .collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.nav-header .hamburger-menu .collapse .card {
+  border: 0;
+  border-radius: 0;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.nav-header .hamburger-menu .collapse ul {
+  list-style-type: none;
+  padding: 0;
+}
+.nav-header .hamburger-menu .collapse ul li {
+  padding: 0.8rem 0.5rem;
+}
+.nav-header .hamburger-menu .collapse ul li:focus {
+  background-color: rgb(245, 245, 245);
+}
+
+nav.navbar ul.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+nav.navbar li {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.25s ease-out;
+  position: relative;
+}
+nav.navbar li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #060606;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 50%;
+}
+nav.navbar .line-divide {
+  width: 0;
+  height: 2px;
+  background: #060606;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  border: 50%;
+  transition: all 0.25s ease-out;
+}
+nav.navbar li:hover .line-divide {
+  width: 60%;
+}
+nav.navbar li a {
+  padding: 0.8rem 1rem;
+}
+nav.navbar .nav-link.active {
+  font-weight: 600;
+  color: #060606;
+  background: rgba(255, 255, 255, 0.45);
+  position: relative;
+  border-radius: 30px 0;
+}
+nav.navbar .nav-link.active .line-divide {
+  display: none;
+}
+nav.navbar li:hover {
+  font-weight: 500;
+  color: #060606;
+}
+
+.navbar .img-logo img {
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.offcanvas {
+  overflow: hidden;
+  background: #73931F;
+  background-color: #4f6616;
+  background: linear-gradient(45deg, black, transparent);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  color: #fff;
+}
+.offcanvas .offcanvas-header .btn-close {
+  color: white;
+}
+.offcanvas .offcanvas-body .menu-sidebar {
+  list-style: none;
+  padding: 0;
+}
+.offcanvas .offcanvas-body .menu-sidebar li {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.offcanvas .offcanvas-body .menu-sidebar li a .line-divide {
+  width: 0;
+  height: 4px;
+  background: #060606;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 50px;
+  transition: all 0.25s ease-out;
+}
+.offcanvas .offcanvas-body .menu-sidebar li a.nav-link.active, .offcanvas .offcanvas-body .menu-sidebar li a.nav-link:hover {
+  color: #73931F;
+}
+.offcanvas .offcanvas-body .menu-sidebar li a.nav-link.active .line-divide, .offcanvas .offcanvas-body .menu-sidebar li a.nav-link:hover .line-divide {
+  width: 40%;
+  left: 20px;
+  background: #73931F;
+}
+.offcanvas .offcanvas-body .menu-sidebar .dropdown-menu, .offcanvas .offcanvas-body .menu-sidebar .collapse .cs-menu {
+  list-style: none;
+  padding: 0;
+}
+.offcanvas .offcanvas-body .menu-sidebar .dropdown-menu li, .offcanvas .offcanvas-body .menu-sidebar .collapse .cs-menu li {
+  padding: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.offcanvas .offcanvas-body .menu-sidebar .dropdown-menu a, .offcanvas .offcanvas-body .menu-sidebar .collapse .cs-menu a {
+  font-size: 16px;
+  color: #060606;
+  text-decoration: none;
+}
+.offcanvas .offcanvas-body .menu-sidebar .collapse .card-body {
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+.offcanvas .offcanvas-body .menu-sidebar li:focus {
+  background: rgba(0, 0, 0, 0.15);
+}
+.offcanvas .circle-container img {
+  left: -120px;
+  top: 40%;
+  width: 800px;
+}
+.offcanvas .offcanvas-footer {
+  padding: 0.5rem 0;
+}
+.offcanvas .offcanvas-footer .sidebar-links {
+  width: 65%;
+}
+.offcanvas .offcanvas-footer .sidebar-links a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #060606;
+  color: #73931F;
+  transition: all 0.5s linear;
+}
+.offcanvas .offcanvas-footer .sidebar-links a:hover {
+  background: #73931F;
+  color: whitesmoke;
+}
+
+.btn {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0.5rem 1.5rem;
+  min-width: 160px;
+  margin: 0 10px;
+}
+
+.btn-primary {
+  background: gray;
+  border-color: gray;
+  color: #fafafa;
+}
+
+.btn-no-bx-shadow {
+  box-shadow: none;
+  -webkit-backdrop-filter: none !important;
+          backdrop-filter: none !important;
+}
+
+.btn-no-bx-shadow:hover, .btn-no-bx-shadow:focus {
+  box-shadow: none;
+  -webkit-backdrop-filter: none !important;
+          backdrop-filter: none !important;
+  color: #4f6616 !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: darkgray !important;
+  border-color: darkgray !important;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: whitesmoke;
+  color: whitesmoke;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: rgb(255, 255, 255) !important;
+  /* border-color: #4f6616 !important; */
+  color: #060606 !important;
+}
+#about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  width: 100%;
+  /* height: 100%; */
+  border: 0;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: whitesmoke;
+  color: #060606;
+  border-radius: 30px 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flip-card-front img {
+  width: 100%;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #060606;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 30px 0;
+  overflow: hidden;
+}
+  .flip-card-back h3 {
+    font-size: 26px;
+  }
+  .footer {
+    background: #060606;
+    color: white;
+  }
+  .footer a {
+    color: white;
+  }
+  main {
+    padding-bottom: 5.5rem;
+  }
+/*# sourceMappingURL=style.css.map */
